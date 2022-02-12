@@ -1,16 +1,24 @@
+import React from 'react';
 
-function App(props) {
-  const colorStyle = {
-    color:props.color,
-    fontSize:props.size+"px"
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
   }
-  return (
-    <div>
-      <div style={colorStyle}>
-      Hello World!
+
+  render() {
+    const colorStyle = {
+    color:this.props.color,
+    fontSize:this.props.size+"px"
+    }
+    return (
+      <div>
+        <div style={colorStyle}>
+        Hello World!
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
